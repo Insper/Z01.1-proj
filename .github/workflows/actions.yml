@@ -33,6 +33,8 @@ jobs:
         libncurses5:i386 libstdc++6:i386 libpng-dev libpng16-16:i386 \
         libpng16-16 python-gobject libnotify-bin 
         sudo apt install ghdl
+        sudo apt install git
+        git clone https://github.com/Insper/Z01.1-proj.git
         
     - name: Install python dependencies
       run: |
@@ -41,6 +43,6 @@ jobs:
     - name: teste vhdl
       run: |
         cd $HOME/Z01.1-proj/b_logComb/
-        SIM=ghdl pytest -s
+        pytest -s
         
     
