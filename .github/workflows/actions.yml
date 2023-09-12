@@ -40,7 +40,7 @@ jobs:
       
     - name: teste vhdl
       run: |
-        cd b_logComb
+        cd $HOME/Z01.1-proj/b_logComb/
         SIM=ghdl pytest -s
         
     
