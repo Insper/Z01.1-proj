@@ -42,7 +42,7 @@ jobs:
       
     - name: teste vhdl
       run: |
-        cd /home/runner/Z01.1-proj/b_logComb/
+        cd b_logComb
         pytest -s
         
     
