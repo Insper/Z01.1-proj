@@ -42,6 +42,9 @@ jobs:
       
     - name: teste vhdl
       run: |
+        sudo apt install git
+        cd $HOME
+        git clone https://github.com/Insper/Z01.1-proj.git
         cd $HOME/Z01.1-proj/b_logComb/
         pytest -s
         
