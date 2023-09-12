@@ -16,6 +16,7 @@ jobs:
     
     env:
       SIM: ghdl 
+      
     
     steps:
     - uses: actions/checkout@v2
@@ -33,8 +34,7 @@ jobs:
         libncurses5:i386 libstdc++6:i386 libpng-dev libpng16-16:i386 \
         libpng16-16 python-gobject libnotify-bin 
         sudo apt install ghdl
-        sudo apt install git
-        git clone https://github.com/Insper/Z01.1-proj.git
+
         
     - name: Install python dependencies
       run: |
@@ -42,10 +42,7 @@ jobs:
       
     - name: teste vhdl
       run: |
-        sudo apt install git
-        cd $HOME
-        git clone https://github.com/Insper/Z01.1-proj.git
-        cd $HOME/Z01.1-proj/b_logComb/
+        cd /home/runner/Z01.1-proj/b_logComb/
         pytest -s
         
     
