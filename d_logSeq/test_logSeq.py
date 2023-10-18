@@ -55,9 +55,9 @@ def test_register64():
     run(vhdl_sources=[source('register64.vhd'),source('register32.vhd'),source('register16.vhd'),source('register8.vhd'),source("binarydigit.vhd"),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd')], toplevel="register64", module="logseq_cocotb" , testcase='tb_register64', toplevel_lang="vhdl")
 
 
-@pytest.mark.telemetry_files(source('pc.vhd'))
+@pytest.mark.telemetry_files(source('pc.vhd'),source('register16.vhd'),source('register8.vhd'),source('binarydigit.vhd'),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd'))
 def test_pc():
-    run(vhdl_sources=[source("pc.vhd")], toplevel="pc", module="logseq_cocotb" , testcase='tb_pc', toplevel_lang="vhdl")
+    run(vhdl_sources=[source("pc.vhd"),source('register16.vhd'),source('register8.vhd'),source('binarydigit.vhd'),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd')], toplevel="pc", module="logseq_cocotb" , testcase='tb_pc', toplevel_lang="vhdl")
 
 
 
@@ -81,9 +81,9 @@ def test_ram512():
     run(vhdl_sources=[source('ram512.vhd'), source('ram64.vhd'), source('ram8.vhd'), source('register16.vhd'), source('register8.vhd'), source('binarydigit.vhd'), source('flipflopd.vhd'), source('../../b_logComb/src/mux2way.vhd'), source('../../b_logComb/src/mux8way16.vhd'), source('../../b_logComb/src/dmux8way.vhd')], toplevel="ram512", module="logseq_cocotb" , testcase='tb_ram512', toplevel_lang="vhdl")
 
 
-@pytest.mark.telemetry_files(source('ram4k.vhd'), source('ram64.vhd'), source('ram8.vhd'),source('register16.vhd'),source('register8.vhd'), source('binarydigit.vhd'),source('flipflopd.vhd'), source('../../b_logComb/src/mux2way.vhd'), source('../../b_logComb/src/mux8way16.vhd'), source('../../b_logComb/src/dmux8way.vhd') )
+@pytest.mark.telemetry_files(source('ram4k.vhd'),source('ram512.vhd'), source('ram64.vhd'), source('ram8.vhd'),source('register16.vhd'),source('register8.vhd'), source('binarydigit.vhd'),source('flipflopd.vhd'), source('../../b_logComb/src/mux2way.vhd'), source('../../b_logComb/src/mux8way16.vhd'), source('../../b_logComb/src/dmux8way.vhd') )
 def test_ram4k():
-    run(vhdl_sources=[source('ram4k.vhd'), source('ram512.vhd'), source('ram64.vhd'), source('ram8.vhd'), source('register16.vhd'), source('register8.vhd'), source('binarydigit.vhd'), source('flipflopd.vhd'), source('../../b_logComb/src/mux2way.vhd'), source('../../b_logComb/src/mux8way16.vhd'), source('../../b_logComb/src/dmux8way.vhd')], toplevel="ram4k", module="logseq_cocotb" , testcase='tb_ram4k', toplevel_lang="vhdl")
+    run(vhdl_sources=[source('ram4k.vhd'), source('ram512.vhd'),source('ram512.vhd'), source('ram64.vhd'), source('ram8.vhd'), source('register16.vhd'), source('register8.vhd'), source('binarydigit.vhd'), source('flipflopd.vhd'), source('../../b_logComb/src/mux2way.vhd'), source('../../b_logComb/src/mux8way16.vhd'), source('../../b_logComb/src/dmux8way.vhd')], toplevel="ram4k", module="logseq_cocotb" , testcase='tb_ram4k', toplevel_lang="vhdl")
 
 
 
