@@ -21,8 +21,8 @@ public class CodeTest {
 	
 	@Test
 	public void test_toBinary() {
-		assumeFalse(Code.toBinary("0") == null); // ignora test
-		assumeFalse(Code.toBinary("0").isEmpty()); // ignora test
+		//assumeFalse(Code.toBinary("0") == null); // ignora test
+		//assumeFalse(Code.toBinary("0").isEmpty()); // ignora test
 		
 		assertEquals("0000000000000000", Code.toBinary("0"));
 		assertEquals("0000000000000001", Code.toBinary("1"));
@@ -43,8 +43,8 @@ public class CodeTest {
 	
 	@Test
 	public void testDestine() {
-		assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
-		assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
 		
 		assertEquals("0010", Code.dest(new String[] { "movw", "%A", "%D" }));
 		assertEquals("0100", Code.dest(new String[] { "movw", "%A", "(%A)" }));
@@ -83,8 +83,8 @@ public class CodeTest {
 	
 	@Test
 	public void testComputation() {
-		assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
-		assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
 		
 		assertEquals("000110000", Code.comp(new String[] { "movw", "%A", "%D" }));
 		assertEquals("000001100", Code.comp(new String[] { "movw", "%D", "%A" }));
@@ -127,8 +127,8 @@ public class CodeTest {
 	
 	@Test
 	public void testJump() {
-		assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
-		assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }) == null); // ignora test
+		//assumeFalse(Code.dest(new String[] { "nop" }).isEmpty()); // ignora test
 		
 		assertEquals("000", Code.jump(new String[] { "movw", "%A", "%D" }));
 		assertEquals("000", Code.jump(new String[] { "addw", "%A", "%D", "%D" }));
