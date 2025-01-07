@@ -2,5 +2,3 @@ pytest
 pytest-sugar
 cocotb
 cocotb-test
-git+https://github.com/insper-education/telemetry-pytest
-
