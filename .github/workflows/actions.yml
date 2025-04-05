@@ -42,7 +42,6 @@ jobs:
       
     - name: teste vhdl
       run: |
-        cd b_logComb
         SIM=ghdl pytest -s
         
     
