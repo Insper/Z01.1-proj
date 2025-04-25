@@ -38,6 +38,7 @@ jobs:
     - name: Install python dependencies
       run: |
         pip3 install -r requirements.txt
+        pip3 install numpy
       
     - name: teste vhdl
       run: |
