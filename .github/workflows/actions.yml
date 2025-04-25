@@ -42,6 +42,7 @@ jobs:
       
     - name: teste vhdl
       run: |
+        cd f_Assembly
         SIM=ghdl pytest -s
         
     
