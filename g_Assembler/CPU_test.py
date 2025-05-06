@@ -1,8 +1,6 @@
 # Adapted from https://github.com/cocotb/cocotb/blob/master/examples/doc_examples/quickstart/test_my_design.py
 
 import pytest
-from telemetry import telemetryMark
-pytestmark = telemetryMark()
 
 import os
 from termcolor import colored
@@ -50,7 +48,6 @@ def alu(x,y, code):
         return 0
 
 
-@pytest.mark.telemetry_files('CPU_test.py')      
 def test_CPU():
 
     erro = 0
