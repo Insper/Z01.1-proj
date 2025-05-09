@@ -29,7 +29,25 @@ print("------------------------------")
 assembler.vmtranslator(False, vmDir, nasm, "jar/Z01-VMTranslator.jar")
 
 print("-------------------------")
-print("- Assembling files .... " )
+print("- Assembling files default.... " )
+print("-------------------------")
+error, log = assembler.compileAll("jar/Z01-Assembler.jar", [nasm], hack)
+
+
+nasm = pwd+"/bin/nasm_group/"
+hack = pwd+"/bin/hack_group/"
+
+assembler.clearbin(nasm)
+assembler.clearbin(hack)
+
+print("------------------------------")
+print("- Translating src files       ")
+print("- to H-VM/bin/nasm_group/ ")
+print("------------------------------")
+assembler.vmtranslator(False, vmDir, nasm, "VMtranslator/Z01-VMTranslator.jar")
+
+print("-------------------------")
+print("- Assembling files group.... " )
 print("-------------------------")
 error, log = assembler.compileAll("jar/Z01-Assembler.jar", [nasm], hack)
 
