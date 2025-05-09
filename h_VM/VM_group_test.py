@@ -22,9 +22,9 @@ def alu(x,y, code):
     elif code == "110001":
         return ~y
     elif code == "001111":
-        return uint16(65536-int(x)) if (x!= 0) else 0  #-x
+        return np.uint16(65536-int(x)) if (x!= 0) else 0  #-x
     elif code == "110011":
-        return uint16(65536-int(y)) if (y!= 0) else 0  #-y
+        return np.uint16(65536-int(y)) if (y!= 0) else 0  #-y
     elif code == "011111":
         return (x+1) if (x < 65535) else 0  #x+1
     elif code == "110111":
@@ -36,9 +36,9 @@ def alu(x,y, code):
     elif code == "000010":
         return (x+y) if ( (np.uint32(x)+np.uint32(y)) <= 65535) else (np.uint32(x)+np.uint32(y)-65536)  #x+y
     elif code == "010011":
-        return (x-y) if (x >= y) else uint16(65536-(int(y)-int(x)))  #x-y
+        return (x-y) if (x >= y) else np.uint16(65536-(int(y)-int(x)))  #x-y
     elif code == "000111":
-        return (y-x) if ( y >= x) else uint16(65536-(int(x)-int(y)))  #y-x
+        return (y-x) if ( y >= x) else np.uint16(65536-(int(x)-int(y)))  #y-x
     elif code == "000000":
         return x&y
     elif code == "010101":
